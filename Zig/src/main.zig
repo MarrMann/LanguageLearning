@@ -139,7 +139,7 @@ fn init_aliens() !void {
                     else => alien3Texture2,
                 },
                 .pos = rl.Vector2.init(
-                    @as(f32, @floatFromInt(@as(c_int, @intCast(x)) * (alien1Texture1.width + 10) + 35)),
+                    @as(f32, @floatFromInt(@as(c_int, @intCast(x)) * (alien1Texture1.width + 20) + 35)),
                     @as(f32, @floatFromInt(@as(c_int, @intCast(y)) * (alien1Texture1.height + 10) + 35)),
                 ),
             };
