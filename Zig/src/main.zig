@@ -40,7 +40,7 @@ fn update() void {
 
     // Update aliens
     const previousUpdateState = state.aliensUpdateState;
-    state.aliensUpdateState = @as(u8, @intFromFloat(state.time * 20)) % 2;
+    state.aliensUpdateState = @as(u8, @intFromFloat(@mod(state.time * 20, 2)));
     if (previousUpdateState != state.aliensUpdateState) {
         for (&state.aliens) |*alien| {
             if (alien.pos.x <= 0 and state.aliensDirection == -1 or
